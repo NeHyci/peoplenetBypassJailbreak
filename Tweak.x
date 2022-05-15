@@ -46,7 +46,7 @@
   for (NSString *file in detectedFiles) {
     if ([path isEqualToString:file]) return NO;
   }
-    return NO;
+  return %orig(path);
 }
 %end
 %hookf(char *, getenv, const char *env) {
